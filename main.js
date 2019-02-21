@@ -10,7 +10,7 @@ var setBingoEventHandlers = (function() {
 
   const updateBody = () => {
     let body =
-      "Hi,\r\nthanks for sharing your data. You have real swag!\r\n-----------------\r\nPlease tell me if you have choose to go with microservices: (YES|NO)\r\n-----------------\r\nselected aspects:\r\n";
+      "Hi,\r\nthanks for sharing your data. You have real swag!\r\n-----------------\r\nPlease tell me if you have chosen to go with microservices: (YES|NO)\r\n-----------------\r\nselected aspects:\r\n";
     aspects.forEach(aspect => {
       const aspectElement = document.getElementById(aspect);
       const isActive = aspectElement.classList.contains("active");
@@ -19,7 +19,7 @@ var setBingoEventHandlers = (function() {
       body += isActive ? "yes" : "no";
       body += "\r\n";
     });
-    body += "\r\n\r\nbest, David";
+    body += "\r\n\r\nIf you want to tell me some additional stuff, feel free to do so.\r\n\r\nbest, David";
     document.getElementById("submit-button").href =
       "mailto:david@leitner.io?subject=Microservice-Bingo&body=" + encodeURIComponent(body);
   };
