@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Microservice Bingo</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:900|Open+Sans" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
+      </p>
+    <![endif]-->
+
+    <div class="container">
+      <div class="header">
+        <div class="topline">the one any only</div>
+        <h1>Microservice Bingo</h1>
+      </div>
+      <div class="intro">
+        So, somebody told me that you are considering <br />
+        <b>a microservice architecture to solve all your issues</b>. <br />
+        Just let me ask you one question first:
+      </div>
+
+      <h2>Do you <i>really</i> have a need for ... ?</h2>
+      <div class="table">
+        <div class="row">
+          <div class="cell active">
+            Independent Deployments
+            <div class="info">Seperate deployments are mandatory.</div>
+          </div>
+          <div class="cell">
+            Autonomous Operations
+            <div class="info">Services run and life on their own.</div>
+          </div>
+          <div class="cell">
+            Different Technologies
+            <div class="info">Services are technology agnostic.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            Strong Isolation
+            <div class="info">A <b>really</b> strong isolation is wanted.</div>
+          </div>
+          <div class="cell">
+            Diverse Scaling
+            <div class="info">Services can scale totally on their own.</div>
+          </div>
+          <div class="cell">
+            A Polished Résumé
+            <div class="info">I'm sure you know what i mean.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="not-a-good-idea" class="result">
+        <h2>Määh,</h2>
+        <p>
+          looks like you add a lot of <a href="accidentical complexity"></a>, without taking advantage of most benefits.
+        </p>
+        <div>
+          Maybe take a look at
+          <a href="https://m.signalvnoise.com/the-majestic-monolith-29166d022228">The Majestic Monolith</a>,
+          <a href="https://scs-architecture.org/">Self-contained Systems</a> or
+          <a href="https://github.com/odrotbohm/moduliths">Moduliths</a>.
+        </div>
+      </div>
+      <div id="start-small" class="result">
+        <h2>Okay,</h2>
+        <p>
+          maybe the additional complexity you add by microservices pays of for you.
+        </p>
+        <p>
+          But hold back cowboy, before creating a ton of repos right now, read up the
+          <a href="https://martinfowler.com/bliki/MonolithFirst.html">Monolith First apporach</a>.
+        </p>
+      </div>
+
+      <div class="baseline">
+        David Leinter - <a href="https://twitter.com/duffleit">@duffleit</a> - non-hype-train activist
+      </div>
+      <div class="footer">
+        <a href="mailto:david@leitner.io">Send me your results</a>
+        <p>I promise you I will only use it for damn-true serious research.</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+      window.ga = function() {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>
