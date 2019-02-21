@@ -175,6 +175,15 @@ h2 {
   background-image: url("/images/yes.png");
 }
 
+.further-references {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.further-references > a {
+  color: black !important;
+}
+
 .baseline {
   padding: 1rem;
   text-align: center;
