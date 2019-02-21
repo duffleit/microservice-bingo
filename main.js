@@ -21,7 +21,7 @@ var setBingoEventHandlers = (function() {
     });
     body += "\r\n\r\nbest, David";
     document.getElementById("submit-button").href =
-      "mailto:microservices@leitner.io?subject=Microservice-Bingo&body=" + encodeURIComponent(body);
+      "mailto:david@leitner.io?subject=Microservice-Bingo&body=" + encodeURIComponent(body);
   };
 
   const setFormTouched = () => {
