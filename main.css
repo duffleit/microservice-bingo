@@ -72,7 +72,7 @@ h2 {
   justify-content: flex-end;
   border-radius: 2px;
   font-family: "Montserrat", sans-serif;
-  text-align: left;
+  text-align: center;
   flex-direction: column;
   cursor: pointer;
   background-image: url(/images/checked_grey.png);
