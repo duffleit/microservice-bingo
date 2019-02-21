@@ -151,6 +151,11 @@ h2 {
 .result > .result-container > p {
   margin: 1rem 0 0 0;
 }
+
+.result > .result-container > p.warning {
+  font-weight: bold;
+}
+
 .result > .result-container > h2 {
   display: inline-block;
   background: #c850c0;
