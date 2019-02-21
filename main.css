@@ -47,11 +47,7 @@ a {
 }
 
 h2 {
-  margin: 3rem 0 0;
-}
-
-.explaination{
-  margin: 0 0 1rem;
+  margin: 3rem 0 1rem;
 }
 
 .table {
@@ -128,7 +124,7 @@ h2 {
 
 .footer > p {
   font-style: italic;
-  width: 50%;
+  width: 70%;
   text-align: center;
   font-size: 0.9rem;
   margin: 0;
@@ -141,6 +137,7 @@ h2 {
 }
 
 .result {
+  margin-top: 2rem;
   font-size: 0.9rem;
   margin-right: 15px;
   border: 5px dashed black;
@@ -208,6 +205,9 @@ h2 {
 }
 
 @media (max-width: 600px) {
+  body{
+    justify-content: flex-start;
+  }
   .table > .row {
     flex-direction: column;
   }
@@ -219,9 +219,18 @@ h2 {
     margin-top: 5px;
   }
   .result > .result-container {
+    padding-top: 105px;
     padding-left: 0;
-    background: none !important;
     min-height: 0;
+    background-position: top center;
+  }
+
+  #result-no > .result-container {
+    background-image: url("/images/no_small.png");
+  }
+  
+  #result-yes > .result-container {
+    background-image: url("/images/yes_small.png");
   }
 
   .result {

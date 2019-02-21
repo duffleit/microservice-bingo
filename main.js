@@ -24,9 +24,11 @@ var setBingoEventHandlers = (function() {
       "mailto:david@leitner.io?subject=Microservice-Bingo&body=" + encodeURIComponent(body);
   };
 
-  const setFormTouched = () => {
+  document.getElementById("next-button").addEventListener("click", () => {
     document.getElementById("result").classList.remove("hidden");
-  };
+    document.getElementById("questions").classList.add("hidden");
+
+  });
 
   const updateResult = () => {
     const count = aspects.filter(aspect => {
@@ -52,9 +54,11 @@ var setBingoEventHandlers = (function() {
       } else {
         aspectElement.classList.add("active");
       }
-      setFormTouched();
       updateBody();
       updateResult();
     });
   });
+
+  updateBody();
+  updateResult();
 })();

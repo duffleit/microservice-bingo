@@ -65,43 +65,48 @@
         <b>a microservice architecture to solve all your issues</b>. Just let me
         ask you one question first:
       </div>
-      <h2>Do you <i>really</i> have a need for ... ?</h2>
-      <p class="explaination">Select the attributes you mandatory need.</p>
-      <div class="table">
-        <div class="row">
-          <div class="cell" id="independent-deployments">
-            Independent Deployments
-            <div class="info">Separate deployments are mandatory.</div>
+      <div id="questions">
+        <h2>Do you <i>really</i> have a need for ... ?</h2>
+        <div class="table">
+          <div class="row">
+            <div class="cell" id="independent-deployments">
+              Independent Deployments
+              <div class="info">Separate deployments are mandatory.</div>
+            </div>
+            <div class="cell" id="autonomous-operations">
+              Autonomous Operations
+              <div class="info">Services run and live on their own.</div>
+            </div>
+            <div class="cell" id="different-technologies">
+              Different Technologies
+              <div class="info">Services are technology agnostic.</div>
+            </div>
           </div>
-          <div class="cell" id="autonomous-operations">
-            Autonomous Operations
-            <div class="info">Services run and live on their own.</div>
-          </div>
-          <div class="cell" id="different-technologies">
-            Different Technologies
-            <div class="info">Services are technology agnostic.</div>
+          <div class="row">
+            <div class="cell" id="strong-isolation">
+              Strong Isolation
+              <div class="info"><b>Really</b> strong isolation is wanted.</div>
+            </div>
+            <div class="cell" id="diverse-scaling">
+              Diverse Scaling
+              <div class="info">Services can scale totally on their own.</div>
+            </div>
+            <script>
+              function makeMoreTransparent() {
+                var cvDrivenStyle = document.getElementById("cv-driven").style;
+                var currentOpacity = parseFloat(cvDrivenStyle.opacity) || 1.0;
+                cvDrivenStyle.opacity = currentOpacity / 1.5;
+              }
+            </script>
+            <div class="cell" id="cv-driven" onclick="makeMoreTransparent()">
+              A Polished Résumé
+              <div class="info">I'm sure you know what i mean.</div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="cell" id="strong-isolation">
-            Strong Isolation
-            <div class="info"><b>Really</b> strong isolation is wanted.</div>
-          </div>
-          <div class="cell" id="diverse-scaling">
-            Diverse Scaling
-            <div class="info">Services can scale totally on their own.</div>
-          </div>
-          <script>
-            function makeMoreTransparent() {
-              var cvDrivenStyle = document.getElementById("cv-driven").style;
-              var currentOpacity = parseFloat(cvDrivenStyle.opacity) || 1.0;
-              cvDrivenStyle.opacity = currentOpacity / 1.5;
-            }
-          </script>
-          <div class="cell" id="cv-driven" onclick="makeMoreTransparent()">
-            A Polished Résumé
-            <div class="info">I'm sure you know what i mean.</div>
-          </div>
+        <div class="footer">
+          <a id="next-button">Calculate the result</a>
+          <p><b>First</b> select all the attributes you mandatory need in your system.</p>
         </div>
       </div>
 
