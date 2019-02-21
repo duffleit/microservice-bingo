@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Microservice Bingo</title>
-    <meta name="description" content="So, somebody told me that you are considering to go for a microservice architecture to solve all your issues." />
+    <meta
+      name="description"
+      content="So, somebody told me that you are considering to go for a microservice architecture to solve all your issues."
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -11,11 +14,11 @@
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@duffleit" />
+    <meta name="twitter:title" content="Microservice Bingo" />
     <meta
-      name="twitter:title"
-      content="Microservice Bingo"
+      name="twitter:description"
+      content="So, somebody told me that you are considering to go for a microservice architecture to solve all your issues."
     />
-    <meta name="twitter:description" content="So, somebody told me that you are considering to go for a microservice architecture to solve all your issues." />
     <meta
       name="twitter:image"
       content="http://microservice.bingo/images/preview.jpg"
@@ -63,6 +66,7 @@
         ask you one question first:
       </div>
       <h2>Do you <i>really</i> have a need for ... ?</h2>
+      <p class="explaination">Select the attributes you mandatory need.</p>
       <div class="table">
         <div class="row">
           <div class="cell" id="independent-deployments">
@@ -87,7 +91,14 @@
             Diverse Scaling
             <div class="info">Services can scale totally on their own.</div>
           </div>
-          <div class="cell" id="cv-driven" style="cursor: not-allowed">
+          <script>
+            function makeMoreTransparent() {
+              var cvDrivenStyle = document.getElementById("cv-driven").style;
+              var currentOpacity = parseFloat(cvDrivenStyle.opacity) || 1.0;
+              cvDrivenStyle.opacity = currentOpacity / 1.5;
+            }
+          </script>
+          <div class="cell" id="cv-driven" onclick="makeMoreTransparent()">
             A Polished Résumé
             <div class="info">I'm sure you know what i mean.</div>
           </div>
