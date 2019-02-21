@@ -5,11 +5,12 @@ var setBingoEventHandlers = (function() {
     "autonomous-operations",
     "different-technologies",
     "strong-isolation",
-    "diverse-scaling",
+    "diverse-scaling"
   ];
 
   const updateBody = () => {
-    let body = "Hi,\nthanks for sharing your data. You have real swag!\n-----------------\nPlease tell me if you finally went for microservices: (YES|NO)\n-----------------\nselected aspects:\n";
+    let body =
+      "Hi,\nthanks for sharing your data. You have real swag!\n-----------------\nPlease tell me if you finally went for microservices: (YES|NO)\n-----------------\nselected aspects:\n";
     aspects.forEach(aspect => {
       const aspectElement = document.getElementById(aspect);
       const isActive = aspectElement.classList.contains("active");
@@ -19,7 +20,8 @@ var setBingoEventHandlers = (function() {
       body += "\n";
     });
     body += "\n\nbest, David";
-    document.getElementById("mail-body").value = body;
+    document.getElementById("submit-button").href =
+      "mailto:microservices@leitner.io?subject=Microservice-Bingo&body=" + encodeURIComponent(body);
   };
 
   const setFormTouched = () => {

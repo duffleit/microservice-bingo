@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Microservice Bingo</title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <link rel="stylesheet" href="main.css" />
     <link
@@ -29,101 +29,89 @@
       </div>
       <div class="intro">
         So, somebody told me that you are considering to go for
-        <b>a microservice architecture to solve all your issues</b>.
-        Just let me ask you one question first:
+        <b>a microservice architecture to solve all your issues</b>. Just let me
+        ask you one question first:
       </div>
-
-      <form
-        enctype="text/plain"
-        method="get"
-        action="mailto:microservices@leitner.io"
-      >
-        <h2>Do you <i>really</i> have a need for ... ?</h2>
-
-        <input type="hidden" id="mail-body" name="body" value="" />
-        <div class="table">
-          <div class="row">
-            <div class="cell" id="independent-deployments">
-              Independent Deployments
-              <div class="info">Seperate deployments are mandatory.</div>
-            </div>
-            <div class="cell" id="autonomous-operations">
-              Autonomous Operations
-              <div class="info">Services run and life on their own.</div>
-            </div>
-            <div class="cell" id="different-technologies">
-              Different Technologies
-              <div class="info">Services are technology agnostic.</div>
-            </div>
+      <h2>Do you <i>really</i> have a need for ... ?</h2>
+      <div class="table">
+        <div class="row">
+          <div class="cell" id="independent-deployments">
+            Independent Deployments
+            <div class="info">Seperate deployments are mandatory.</div>
           </div>
-          <div class="row">
-            <div class="cell" id="strong-isolation">
-              Strong Isolation
-              <div class="info">
-                A <b>really</b> strong isolation is wanted.
-              </div>
-            </div>
-            <div class="cell" id="diverse-scaling">
-              Diverse Scaling
-              <div class="info">Services can scale totally on their own.</div>
-            </div>
-            <div class="cell" id="cv-driven" style="cursor: not-allowed">
-              A Polished Résumé
-              <div class="info">I'm sure you know what i mean.</div>
-            </div>
+          <div class="cell" id="autonomous-operations">
+            Autonomous Operations
+            <div class="info">Services run and life on their own.</div>
+          </div>
+          <div class="cell" id="different-technologies">
+            Different Technologies
+            <div class="info">Services are technology agnostic.</div>
           </div>
         </div>
+        <div class="row">
+          <div class="cell" id="strong-isolation">
+            Strong Isolation
+            <div class="info">A <b>really</b> strong isolation is wanted.</div>
+          </div>
+          <div class="cell" id="diverse-scaling">
+            Diverse Scaling
+            <div class="info">Services can scale totally on their own.</div>
+          </div>
+          <div class="cell" id="cv-driven" style="cursor: not-allowed">
+            A Polished Résumé
+            <div class="info">I'm sure you know what i mean.</div>
+          </div>
+        </div>
+      </div>
 
-        <div id="result" class="hidden">
-          <div id="result-no" class="result">
-            <div class="result-container">
-              <h2>Määh,</h2>
-              <p>
-                looks like you add a lot of
-                <a href="accidentical complexity"></a>, without taking advantage
-                of most benefits.
-              </p>
-              <p>
-                Maybe take a look at
-                <a
-                  href="https://m.signalvnoise.com/the-majestic-monolith-29166d022228"
-                  >The Majestic Monolith</a
-                >,
-                <a href="https://scs-architecture.org/"
-                  >Self-contained Systems</a
-                >
-                or
-                <a href="https://github.com/odrotbohm/moduliths">Moduliths</a>.
-              </p>
-            </div>
-          </div>
-          <div id="result-yes" class="result">
-            <div class="result-container">
-              <h2>Okay,</h2>
-              <p>
-                maybe the additional complexity you add by microservices pays of
-                for you.
-              </p>
-              <p>
-                But hold back cowboy, before creating a ton of repos right now,
-                read up the
-                <a href="https://martinfowler.com/bliki/MonolithFirst.html"
-                  >Monolith First apporach</a
-                >.
-              </p>
-            </div>
-          </div>
-          <div class="footer">
-            <input type="submit" value="Send me your results" />
+      <div id="result" class="hidden">
+        <div id="result-no" class="result">
+          <div class="result-container">
+            <h2>Määh,</h2>
             <p>
-              I promise you I will only use it for damn-true serious research.
+              looks like you add a lot of
+              <a href="accidentical complexity"></a>, without taking advantage
+              of most benefits.
+            </p>
+            <p>
+              Maybe take a look at
+              <a
+                href="https://m.signalvnoise.com/the-majestic-monolith-29166d022228"
+                >The Majestic Monolith</a
+              >,
+              <a href="https://scs-architecture.org/">Self-contained Systems</a>
+              or
+              <a href="https://github.com/odrotbohm/moduliths">Moduliths</a>.
             </p>
           </div>
         </div>
-      </form>
+        <div id="result-yes" class="result">
+          <div class="result-container">
+            <h2>Okay,</h2>
+            <p>
+              maybe the additional complexity you add by microservices pays of
+              for you.
+            </p>
+            <p>
+              But hold back cowboy, before creating a ton of repos right now,
+              read up the
+              <a href="https://martinfowler.com/bliki/MonolithFirst.html"
+                >Monolith First apporach</a
+              >.
+            </p>
+          </div>
+        </div>
+        <div class="footer">
+          <a id="submit-button">Send me your results</a>
+          <p>
+            I promise you I will only use it for damn-true serious research.
+          </p>
+        </div>
+      </div>
     </div>
     <div class="baseline">
-      by <a href="https://twitter.com/duffleit">@duffleit</a>, a non-hype-train activist
+      by <a href="https://twitter.com/duffleit">@duffleit</a>, a non-hype-train
+      activist
     </div>
 
     <script src="main.js"></script>

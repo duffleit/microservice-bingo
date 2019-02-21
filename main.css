@@ -64,10 +64,18 @@ h2 {
   .table > .row {
     flex-direction: column;
   }
+  .table > .row > .cell {
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+  .container {
+    margin-top: 0;
+  }
 }
 
 .table > .row > .cell {
   flex-grow: 1;
+  flex-basis: 0;
   padding: 1rem;
   min-height: 6rem;
   border: 1px solid lightgray;
@@ -80,12 +88,6 @@ h2 {
   text-align: left;
   flex-direction: column;
   cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .table > .row > .cell {
-    padding: 0;
-  }
 }
 
 .table > .row > .cell.active {
@@ -113,11 +115,11 @@ h2 {
   align-items: center;
 }
 
-.footer > input {
+.footer > a {
   background: linear-gradient(45deg, #4158d0 30%, #c850c0 90%);
   border-radius: 3px;
   box-shadow: 0 3px 5px 2px rgba(189, 80, 193, 0.24);
-  color: white;
+  color: white !important;
   padding: 1rem;
   display: inline-block;
   text-decoration: none;
