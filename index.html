@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:900|Open+Sans" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:900"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
       </p>
     <![endif]-->
 
@@ -29,68 +33,97 @@
         Just let me ask you one question first:
       </div>
 
-      <h2>Do you <i>really</i> have a need for ... ?</h2>
-      <div class="table">
-        <div class="row">
-          <div class="cell active">
-            Independent Deployments
-            <div class="info">Seperate deployments are mandatory.</div>
-          </div>
-          <div class="cell">
-            Autonomous Operations
-            <div class="info">Services run and life on their own.</div>
-          </div>
-          <div class="cell">
-            Different Technologies
-            <div class="info">Services are technology agnostic.</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="cell">
-            Strong Isolation
-            <div class="info">A <b>really</b> strong isolation is wanted.</div>
-          </div>
-          <div class="cell">
-            Diverse Scaling
-            <div class="info">Services can scale totally on their own.</div>
-          </div>
-          <div class="cell">
-            A Polished Résumé
-            <div class="info">I'm sure you know what i mean.</div>
-          </div>
-        </div>
-      </div>
+      <form
+        enctype="text/plain"
+        method="get"
+        action="mailto:microservices@leitner.io"
+      >
+        <h2>Do you <i>really</i> have a need for ... ?</h2>
 
-      <div id="not-a-good-idea" class="result">
-        <h2>Määh,</h2>
-        <p>
-          looks like you add a lot of <a href="accidentical complexity"></a>, without taking advantage of most benefits.
-        </p>
-        <div>
-          Maybe take a look at
-          <a href="https://m.signalvnoise.com/the-majestic-monolith-29166d022228">The Majestic Monolith</a>,
-          <a href="https://scs-architecture.org/">Self-contained Systems</a> or
-          <a href="https://github.com/odrotbohm/moduliths">Moduliths</a>.
+        <input type="hidden" id="mail-body" name="body" value="" />
+        <div class="table">
+          <div class="row">
+            <div class="cell" id="independent-deployments">
+              Independent Deployments
+              <div class="info">Seperate deployments are mandatory.</div>
+            </div>
+            <div class="cell" id="autonomous-operations">
+              Autonomous Operations
+              <div class="info">Services run and life on their own.</div>
+            </div>
+            <div class="cell" id="different-technologies">
+              Different Technologies
+              <div class="info">Services are technology agnostic.</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell" id="strong-isolation">
+              Strong Isolation
+              <div class="info">
+                A <b>really</b> strong isolation is wanted.
+              </div>
+            </div>
+            <div class="cell" id="diverse-scaling">
+              Diverse Scaling
+              <div class="info">Services can scale totally on their own.</div>
+            </div>
+            <div class="cell" id="cv-driven" style="cursor: not-allowed">
+              A Polished Résumé
+              <div class="info">I'm sure you know what i mean.</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="start-small" class="result">
-        <h2>Okay,</h2>
-        <p>
-          maybe the additional complexity you add by microservices pays of for you.
-        </p>
-        <p>
-          But hold back cowboy, before creating a ton of repos right now, read up the
-          <a href="https://martinfowler.com/bliki/MonolithFirst.html">Monolith First apporach</a>.
-        </p>
-      </div>
 
-      <div class="baseline">
-        David Leinter - <a href="https://twitter.com/duffleit">@duffleit</a> - non-hype-train activist
-      </div>
-      <div class="footer">
-        <a href="mailto:david@leitner.io">Send me your results</a>
-        <p>I promise you I will only use it for damn-true serious research.</p>
-      </div>
+        <div id="result" class="hidden">
+          <div id="result-no" class="result">
+            <div class="result-container">
+              <h2>Määh,</h2>
+              <p>
+                looks like you add a lot of
+                <a href="accidentical complexity"></a>, without taking advantage
+                of most benefits.
+              </p>
+              <p>
+                Maybe take a look at
+                <a
+                  href="https://m.signalvnoise.com/the-majestic-monolith-29166d022228"
+                  >The Majestic Monolith</a
+                >,
+                <a href="https://scs-architecture.org/"
+                  >Self-contained Systems</a
+                >
+                or
+                <a href="https://github.com/odrotbohm/moduliths">Moduliths</a>.
+              </p>
+            </div>
+          </div>
+          <div id="result-yes" class="result">
+            <div class="result-container">
+              <h2>Okay,</h2>
+              <p>
+                maybe the additional complexity you add by microservices pays of
+                for you.
+              </p>
+              <p>
+                But hold back cowboy, before creating a ton of repos right now,
+                read up the
+                <a href="https://martinfowler.com/bliki/MonolithFirst.html"
+                  >Monolith First apporach</a
+                >.
+              </p>
+            </div>
+          </div>
+          <div class="footer">
+            <input type="submit" value="Send me your results" />
+            <p>
+              I promise you I will only use it for damn-true serious research.
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="baseline">
+      by <a href="https://twitter.com/duffleit">@duffleit</a>, a non-hype-train activist
     </div>
 
     <script src="main.js"></script>
@@ -103,6 +136,10 @@
       ga("create", "UA-XXXXX-Y", "auto");
       ga("send", "pageview");
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script
+      src="https://www.google-analytics.com/analytics.js"
+      async
+      defer
+    ></script>
   </body>
 </html>
